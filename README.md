@@ -1,7 +1,8 @@
 # go-cache-generic
 
-It is a fork of [go-cache](https://github.com/patrickmn/go-cache) which implemented with Go 1.18  
-generic. It is still an in-memory key:value store/cache similar to memcached that is
+It is a fork of [go-cache](https://github.com/patrickmn/go-cache) implemented with Go 1.18 generics.
+Despite this enhancement, it remains
+an in-memory key:value store/cache similar to memcached that is
 suitable for applications running on a single machine. Its major advantage is
 that, being essentially a thread-safe `map[string]T` with expiration
 times, it doesn't need to serialize or transmit its contents over the network.
