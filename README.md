@@ -1,5 +1,7 @@
 # go-cache-generic
 
+[![Test](https://github.com/chocolacula/go-cache-generic/actions/workflows/go.yml/badge.svg)](https://github.com/chocolacula/go-cache-generic/actions/workflows/go.yml)
+
 It is a fork of [go-cache](https://github.com/patrickmn/go-cache) implemented with Go 1.18 generics.
 Despite this enhancement, it remains
 an in-memory key:value store/cache similar to memcached that is
