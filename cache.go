@@ -390,7 +390,7 @@ func newCache[T any](de time.Duration, m map[string]Item[T]) *cache[T] {
 }
 
 func newCacheWithJanitor[T any](de time.Duration, ci time.Duration, m map[string]Item[T]) *Cache[T] {
-	c := newCache[T](de, m)
+	c := newCache(de, m)
 	// This trick ensures that the janitor goroutine (which--granted it
 	// was enabled--is running DeleteExpired on c forever) does not keep
 	// the returned C object from being garbage collected. When it is
@@ -411,7 +411,7 @@ func newCacheWithJanitor[T any](de time.Duration, ci time.Duration, m map[string
 // deleted from the cache before calling c.DeleteExpired().
 func New[T any](defaultExpiration, cleanupInterval time.Duration) *Cache[T] {
 	items := make(map[string]Item[T])
-	return newCacheWithJanitor[T](defaultExpiration, cleanupInterval, items)
+	return newCacheWithJanitor(defaultExpiration, cleanupInterval, items)
 }
 
 // Return a new cache with a given default expiration duration and cleanup
@@ -436,7 +436,7 @@ func New[T any](defaultExpiration, cleanupInterval time.Duration) *Cache[T] {
 // map retrieved with c.Items(), and to register those same types before
 // decoding a blob containing an items map.
 func NewFrom[T any](defaultExpiration, cleanupInterval time.Duration, items map[string]Item[T]) *Cache[T] {
-	return newCacheWithJanitor[T](defaultExpiration, cleanupInterval, items)
+	return newCacheWithJanitor(defaultExpiration, cleanupInterval, items)
 }
 
 func empty[T any]() T {

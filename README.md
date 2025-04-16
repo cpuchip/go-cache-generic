@@ -1,7 +1,7 @@
 # go-cache-generic
 
-[![Test](https://github.com/chocolacula/go-cache-generic/actions/workflows/go.yml/badge.svg)](https://github.com/chocolacula/go-cache-generic/actions/workflows/go.yml)
-[![codecov](https://codecov.io/gh/chocolacula/go-cache-generic/graph/badge.svg?token=P94QP0H07U)](https://codecov.io/gh/chocolacula/go-cache-generic)
+[![Test](https://github.com/cpuchip/go-cache-generic/actions/workflows/go.yml/badge.svg)](https://github.com/cpuchip/go-cache-generic/actions/workflows/go.yml)
+[![codecov](https://codecov.io/gh/cpuchip/go-cache-generic/graph/badge.svg?token=P94QP0H07U)](https://codecov.io/gh/cpuchip/go-cache-generic)
 
 It is a fork of [go-cache](https://github.com/patrickmn/go-cache) implemented with Go 1.18 generics.
 Despite this enhancement, it remains
@@ -20,14 +20,14 @@ one) to recover from downtime quickly. (See the docs for `NewFrom()` for caveats
 
 ## Installation
 
-`go get github.com/chocolacula/go-cache-generic`
+`go get github.com/cpuchip/go-cache-generic`
 
 ## Usage
 
 ```go
 import (
  "fmt"
- "github.com/chocolacula/go-cache-generic"
+ "github.com/cpuchip/go-cache-generic"
  "time"
 )
 

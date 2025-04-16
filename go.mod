@@ -1,3 +1,3 @@
-module github.com/chocolacula/go-cache-generic
+module github.com/cpuchip/go-cache-generic
 
-go 1.18
+go 1.24.2
